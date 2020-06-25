@@ -5,8 +5,7 @@
 #include <string.h>
 int main(int argc,char **argv){
  if(argc==1){
-  system("nano");
-  return 0;}
+  return system("nano");}
  int w;
  int sudo=0;
  for (w=1;w<argc;w++){
@@ -23,5 +22,4 @@ int main(int argc,char **argv){
  for (w=1;w<argc;w++){
   strcat(s,argv[w]);
   strcat(s," ");}
- system(s);
- return 0;}
+ return system(s);}
