@@ -7,7 +7,7 @@ int main(int argc,char **argv){
  auto p=fopen("/home/gera/.brig","r");
  int q;
  long long int l,t;
- fscanf(p,"%i %lli",&q,&l);
+ fscanf(p,"# %i %lli #",&q,&l);
  fclose(p);
  long int c=1000000;
  struct timeval j;
@@ -23,7 +23,7 @@ int main(int argc,char **argv){
   if(argv[1][0]=='-'){
    q-=d;}}
  p=fopen("/home/gera/.brig","w");
- fprintf(p,"%i %lli",q,t);
+ fprintf(p,"# %i %lli #",q,t);
  fclose(p);
  char m[1000];
  sprintf(m,"zenity --notification --text=\"brightness: %i%%\"",q);

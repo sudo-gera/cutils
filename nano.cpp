@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 int main(int argc,char **argv){
- if(argc==1){
+ if (argc==1){
   system("nano");
   return 0;}
  int w;
@@ -16,7 +16,7 @@ int main(int argc,char **argv){
    if (errno==EROFS){
     sudo=1;}}}
  char s[1000];
- s[0]='\0';
+ s[0]=0;
  if (sudo){
   strcat(s,"sudo ");}
  strcat(s,"nano ");
