@@ -7,7 +7,8 @@ int main(int argc,char **argv){
  auto p=fopen("/home/gera/.brig","r");
  int q;
  long long int l,t;
- fscanf(p,"# %i %lli #",&q,&l);
+ if (fscanf(p,"# %i %lli #",&q,&l)<2){
+  return 0;}
  fclose(p);
  long int c=1000000;
  struct timeval j;
